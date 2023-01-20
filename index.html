@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="um página que registar quantas cervejas foram tomadas">
+		<meta name="keywords" content="cerveja, contador de cervejas">
+		<title>Beeri</title>
+        <link rel="stylesheet" href="./css/style.css">
+	</head>
+	<body>
+		<label for="beerUnitValue">Valor unitário por birita:</label>
+		<br>
+		<input type="number" id="beerUnitValue" step="0.01">
+		
+		<p id="beerCount">Total de biritas: 0</p>
+		
+		<p id="totalValue">Total a pagar: R$ 0,00</p>
+
+		<input type="hidden" id="count">
+		<button type="button" onclick="beerCounterMinus()">
+			<img src="./assets/images/minus.png" alt="delete" style="width: 128px;">
+		</button>
+		<button type="button" onclick="beerCounterPlus()">
+			<img src="./assets/images/plus.png" alt="add" style="width: 128px;">
+		</button>
+		<br>
+		<div id="graphicBeerCount"></div>
+		<script type="text/javascript" src="./js/script.js"></script>
+	</body>
+</html>

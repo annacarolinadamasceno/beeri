@@ -1,0 +1,11 @@
+body {
+    background-color: #f3c332;
+    margin: 0 auto;
+    padding: 0;
+}
+.menu{
+    background-color: #d4a413;
+    display: flex;
+    justify-content: center;
+    font-size:x-large;
+}
