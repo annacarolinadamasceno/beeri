@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="description" content="um página que registar quantas cervejas foram tomadas">
-		<meta name="keywords" content="cerveja, contador de cervejas">
-		<title>Beeri</title>
-        <link rel="stylesheet" href="./css/style.css">
-	</head>
-	<body>
-		<label for="beerUnitValue">Valor unitário por birita:</label>
-		<br>
-		<input type="number" id="beerUnitValue" step="0.01">
-		
-		<p id="beerCount">Total de biritas: 0</p>
-		
-		<p id="totalValue">Total a pagar: R$ 0,00</p>
-
-		<input type="hidden" id="count">
-		<button type="button" onclick="beerCounterMinus()">
-			<img src="./assets/images/minus.png" alt="delete" style="width: 128px;">
-		</button>
-		<button type="button" onclick="beerCounterPlus()">
-			<img src="./assets/images/plus.png" alt="add" style="width: 128px;">
-		</button>
-		<br>
-		<div id="graphicBeerCount"></div>
-		<script type="text/javascript" src="./js/script.js"></script>
-	</body>
+<head>
+	<meta charset="utf-8" />
+	<title>Beeri</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css" />
+</head>
+<body onload="updateGraphicBeerTypes()">
+	<h1>Beeri</h1>
+	<div id="graphicBeerTypes"></div>
+	<h2><label for="beerValue">Valor unitário por birita:</label></h2>
+	<input type="number" placeholder="R$" id="beerValue" step="0.01" min=0 onchange="updateBeerValue(this.value)" onclick="this.select();">
+	<h2>Total de biritas:</h2>
+	<div id="beerCount">0</div>
+	<h2>Total a pagar:</h2>
+	<div id="beerTotal">R$ 0,00</div>
+	<h2>Dividir a conta por...</h2>	
+	<input type="number" id="payerCount" step="1" min=1 value="1" onchange="updatePayerCount(this.value)" onclick="this.select();">
+	<h2>Total a pagar por pessoa:</h2>
+	<div id="beerValuePerPayer">R$ 0,00</div>
+	<br>
+	<img src="images/minus.png" alt="minus" class="button" onclick="removeABeer()">
+	<img src="images/plus.png" alt="plus" class="button" onclick="addABeer()">
+	<br>
+	<br>
+	<div id="graphicBeerCount"></div>
+	<script type="text/javascript" src="scripts/main.js"></script>
+</body>
 </html>
