@@ -1,11 +1,21 @@
-body {
-    background-color: #f3c332;
-    margin: 0 auto;
-    padding: 0;
+* {
+	font-family: monospace;
+	font-size: x-large;
+	text-align: center;
 }
-.menu{
-    background-color: #d4a413;
-    display: flex;
-    justify-content: center;
-    font-size:x-large;
+
+img.button {
+	width: 64px;
+}
+
+img.on {
+	opacity: 1;
+}
+
+img.off {
+	opacity: 0.4;
+}
+
+img.graphicBeer {
+	width: 128px;
 }
