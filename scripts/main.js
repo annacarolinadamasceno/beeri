@@ -92,3 +92,14 @@ function start() {
 }
 
 document.onload = start();
+
+const inputPayerCount = document.querySelector("#payerCount");
+const inputBeerValue = document.querySelector("#beerValue");
+
+inputPayerCount.addEventListener("click", function() {
+	this.select();
+});
+
+inputBeerValue.addEventListener("click", function() {
+    this.select();
+});

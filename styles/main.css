@@ -1,6 +1,7 @@
+/* styles/main.css */
 * {
 	font-family: monospace;
-	font-size: x-large;
+	font-size: large;
 	text-align: center;
 }
 
@@ -17,5 +18,5 @@ img.off {
 }
 
 img.graphicBeer {
-	width: 128px;
+	width: 64px;
 }
