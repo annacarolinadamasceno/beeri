@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandbox</title>
+    <style>
+    * {
+        font-family: monospace;
+    }
+    </style>
+</head>
+<body>
+    <script>
+        function print(message) {
+            document.write(`${message}<br>`);
+        }
+        var beerTypes = [
+            'images/bottle.png',
+            'images/can.png', 
+            'images/drink.png', 
+            'images/glass.png', 
+            'images/mug.png'
+        ];
+        
+        let source = 'http://localhost/beeri/images/drink.png'; 
+
+        for (let $beerType of beerTypes) {
+		    if (source.includes($beerType)) {
+                print($beerType);
+                break;
+		    }
+	    }
+    </script>
+</body>
+</html>
